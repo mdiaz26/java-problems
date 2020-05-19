@@ -1,0 +1,1 @@
+This repo will serve as my home for Java practice. It will be used to build simple functions while I am learning Java.
