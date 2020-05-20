@@ -4,8 +4,14 @@
 public class IsPalindrome{
 
     public static void main(String[] args){
-        String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        IsPalindrome palTest = new IsPalindrome();
         for (String word : args) {
+            System.out.println(palTest.testForPalindrome(word));
+        }
+    }
+
+    public boolean testForPalindrome(String word){
+        String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             int stringLength = word.length();
             int i = 0;
             int mirrorIndex = stringLength - (i + 1);
@@ -21,13 +27,11 @@ public class IsPalindrome{
                 char rightLetter = word.charAt(mirrorIndex);
                 System.out.println(leftLetter + " - " + rightLetter);
                 if (leftLetter != rightLetter) {
-                    System.out.println("false");
-                    break;
+                    return false;
                 }
                 i++;
                 mirrorIndex--;
             }
+            return true;
         }
-        System.out.println("true");
     }
-}
