@@ -3,26 +3,18 @@
 
 public class IsPalindrome{
 
-    // public boolean isPalindrome(String string) {
-    //     int stringLength = string.length();
-    //     for (int i = 0; i < stringLength; i++){
-    //         int mirrorIndex = stringLength - (i + 1);
-    //         if (string.charAt(i) != string.charAt(mirrorIndex)) {
-    //             return false;
-    //         }
-    //     }
-    //     return true;
-    // }
     public static void main(String[] args){
-        String word = "tacocatt";
-        int stringLength = word.length();
-        for (int i = 0; i < stringLength; i++){
-            int mirrorIndex = stringLength - (i +1);
-            if (word.charAt(i) != word.charAt(mirrorIndex)) {
-                System.out.println("false");
-                break;
+        for (String str : args) {
+            String word = str;
+            int stringLength = word.length();
+            for (int i = 0; i < stringLength; i++){
+                int mirrorIndex = stringLength - (i +1);
+                if (word.charAt(i) != word.charAt(mirrorIndex)) {
+                    System.out.println("false");
+                    break;
+                }
             }
         }
-        System.out.println("true");
+        System.out.println("truthy");
     }
 }
